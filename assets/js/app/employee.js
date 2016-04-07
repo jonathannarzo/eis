@@ -25,6 +25,7 @@ $(document).on('change', '#birth_date', function(){
 $(document).on('click', '#emp-selectall-checbox', function(){
 	var check_status = this.checked;
 	$('.emp-record-checkbox').prop('checked', check_status);
+	buttoncheck();
 });
 
 $(document).on('click', '.emp-record-checkbox', function(){
@@ -94,7 +95,9 @@ $(document).on('click', '#add-employee', function(){
 
 function buttoncheck()
 {
+	var checkboxes = $('.emp-record-checkbox').length;
 	var checks = $('.emp-record-checkbox:checked').length;
+	if (checkboxes != checks) $('#emp-selectall-checbox').prop('checked', false);
 	var remove_condition = (checks > 0);
 	var edit_condition = (checks == 1);
 	$('#edit-selected').prop('disabled', !edit_condition);
