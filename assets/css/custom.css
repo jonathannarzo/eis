@@ -1,0 +1,16 @@
+.navbar-default .navbar-nav > li > a {
+
+}
+
+.navbar-nav > li > .dropdown-menu {
+	border-radius: 0;
+}
+
+.dropdown-menu > li > a {
+
+}
+
+.nav li.current_page_item {
+	color: #555;
+	background-color: #e7e7e7;
+}
